@@ -1,5 +1,6 @@
 ﻿{
-	"serverType":"none",
+	"serverType":"github",
+	"gitEmail":"alexis.michon@gmail.com",
 	"gitIsPrivateRepository":"false",
-	"gitURL":"https://github.com/"
+	"gitURL":"https://github.com/alexis_michon"
 }
