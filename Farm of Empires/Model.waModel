@@ -1,0 +1,618 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><EntityModelCatalog>
+
+<dbInfo name="Model" uuid="DEB2380315EE8E47AF7052ECFC4FADBC"/>
+
+<dataClasses name="Alliance" className="Alliance" collectionName="AllianceCollection" scope="public" uuid="89C3C1B6522F65438252A48CE712B580">
+
+	<extraProperties ____objectunic="true" panelColor="#8DB3E2">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="30" Y="19"/>
+
+		</panel>
+
+	</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="557EFC613F8BDE46999B2A031A00C20F" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="name" kind="storage" scope="public" uuid="5FE02259E4C7914F9A953AD972D63595" type="string"/>
+
+	<attributes name="characterCollection" kind="relatedEntities" scope="public" type="CharacterCollection" reversePath="true" path="alliance"/>
+
+</dataClasses>
+
+<dataClasses name="Building" className="Building" collectionName="BuildingCollection" scope="public" uuid="AE7C108B371C994CBA0D3A1128D92B64">
+
+	<extraProperties ____objectunic="true" panelColor="#B8CCE4">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="1025" Y="623"/>
+
+		</panel>
+
+	</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="B6BEC520858C2E4B9BFE0C98534DB7E8" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="gameElementCollection" kind="relatedEntities" scope="public" type="GameElementCollection" reversePath="true" path="building"/>
+
+	<attributes name="cultureCollection" kind="relatedEntities" scope="public" type="CultureCollection" reversePath="true" path="building"/>
+
+	<attributes name="building_type" kind="relatedEntity" scope="public" uuid="ECC4AD692D065847AAB2A9BF64B8E8BF" type="BuildingType" path="BuildingType"/>
+
+</dataClasses>
+
+<dataClasses name="BuildingType" className="BuildingType" collectionName="BuildingTypeCollection" scope="public" uuid="B92CA048CB887845993E15C1DA602A8D">
+
+	<extraProperties ____objectunic="true" panelColor="#C4BD97">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="1491" Y="619"/>
+
+		</panel>
+
+	</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="72AC2F5D4ADF524ABBEA6959E8FF674C" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="name" kind="storage" scope="public" uuid="046EFC267EC738478AC8C76FEB1B09BA" type="string"/>
+
+	<attributes name="number_of_tile" kind="storage" scope="public" uuid="A5DC3B35F541F54F8047BBB014ACFA8C" type="long"/>
+
+	<attributes name="price" kind="storage" scope="public" uuid="A378C9F3D6360148A4BCC1B884D69E54" type="long"/>
+
+	<attributes name="storage_capacity" kind="storage" scope="public" uuid="9A8810491459C542A33CB113FEBD7E5A" type="long"/>
+
+	<attributes name="is_protected" kind="storage" scope="public" uuid="D41948E5D8C94F47AB2B4E9428865B0D" type="bool"/>
+
+	<attributes name="cost_of_power" kind="storage" scope="public" uuid="5F4AC4D4A0FAE049853FFB712EEF489D" type="long"/>
+
+	<attributes name="attribute1" kind="storage" scope="public" uuid="959AFB06082AA540905C33E1364775DA" type="string"/>
+
+	<attributes name="buildingCollection" kind="relatedEntities" scope="public" type="BuildingCollection" reversePath="true" path="building_type"/>
+
+</dataClasses>
+
+<dataClasses name="Character" className="Character" collectionName="CharacterCollection" scope="public" uuid="22C2B852694DF64DABCB4791DCB05A25">
+
+	<extraProperties ____objectunic="true" panelColor="#C4BD97">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="10" Y="347"/>
+
+		</panel>
+
+	</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="B179CD2797CAD04581F43CB047319388" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="pos_x" kind="storage" scope="public" uuid="1E80B66D8619AB438F20AE823665C010" type="long"/>
+
+	<attributes name="pos_y" kind="storage" scope="public" uuid="9F156BA0AFCACB4F9CD3AD0F05F5AAAB" type="long"/>
+
+	<attributes name="level" kind="storage" scope="public" uuid="CCA7AFD1F7BD7E449BBE3D607B369091" type="long"/>
+
+	<attributes name="number_of_tile" kind="storage" scope="public" uuid="9AECDC383836B24A99BFE84A362EE1C4" type="long"/>
+
+	<attributes name="money" kind="storage" scope="public" uuid="8D47046BE75610418943EA6C9C0AD0F6" type="long"/>
+
+	<attributes name="health" kind="storage" scope="public" uuid="775A7C6F6673CD4F80B6654EEC6E5E36" type="long"/>
+
+	<attributes name="max_health" kind="storage" scope="public" uuid="777DB41D3EE6894498BC5AA701C391F9" type="long"/>
+
+	<attributes name="max_tile_conquest" kind="storage" scope="public" uuid="26E0F235487C5845A18F8247C6D30756" type="long"/>
+
+	<attributes name="regeneration_speed" kind="storage" scope="public" uuid="3B8A85DD33665E4481E570FB30F9229B" type="long"/>
+
+	<attributes name="is_dead" kind="storage" scope="public" uuid="A2FB0E6C10C1FC43ABEB79464AC2F3AB" type="bool"/>
+
+	<attributes name="loose_peace_time" kind="storage" scope="public" uuid="0C9E5B4D3DA0814787EB44C2F136BE3B" type="long"/>
+
+	<attributes name="alliance" kind="relatedEntity" scope="public" uuid="F3A18CEABBB92C48AF7F2329157C530D" type="Alliance" path="Alliance"/>
+
+	<attributes name="attackerCollection" kind="relatedEntities" scope="public" type="FightCollection" reversePath="true" path="attacker"/>
+
+	<attributes name="defenderCollection" kind="relatedEntities" scope="public" type="FightCollection" reversePath="true" path="defender"/>
+
+	<attributes name="fightParticipationCollection" kind="relatedEntities" scope="public" type="FighterCollection" reversePath="true" path="character"/>
+
+	<attributes name="weapon" kind="relatedEntity" scope="public" uuid="78813587992CDB49A2969D8135E27053" type="Weapon" path="Weapon"/>
+
+	<attributes name="game" kind="relatedEntity" scope="public" uuid="F0BD5837482AB9499DF6ED761829CF59" type="Game" path="Game"/>
+
+	<attributes name="tileCollection" kind="relatedEntities" scope="public" type="TileCollection" reversePath="true" path="character"/>
+
+</dataClasses>
+
+<dataClasses name="Culture" className="Culture" collectionName="CultureCollection" scope="public" uuid="B706026CAB1DBF458A3A368B74380DD7">
+
+	<extraProperties ____objectunic="true" panelColor="#76923C">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="942" Y="1079"/>
+
+		</panel>
+
+	</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="FB3CC56885474842AB1CDBA428EB8BE1" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="maturity" kind="storage" scope="public" uuid="1C134563AB74194C95C623C6C6E1C5F6" type="long"/>
+
+	<attributes name="health" kind="storage" scope="public" uuid="BECA14EB60D69946A8F98A746EDA562A" type="long"/>
+
+	<attributes name="is_harverstable" kind="storage" scope="public" uuid="1A4C6B83A8E0C1498E7F5D537B16724E" type="bool"/>
+
+	<attributes name="gameElementCollection" kind="relatedEntities" scope="public" type="GameElementCollection" reversePath="true" path="culture"/>
+
+	<attributes name="building" kind="relatedEntity" scope="public" uuid="3991B2A925AFF446B89EE23E6B60D2C2" type="Building" path="Building"/>
+
+	<attributes name="culture_type" kind="relatedEntity" scope="public" uuid="AE258EFF44A2E544B325FB1A874F2B2B" type="CultureType" path="CultureType"/>
+
+</dataClasses>
+
+<dataClasses name="CultureType" className="CultureType" collectionName="CultureTypeCollection" scope="public" uuid="6827C15B3662714E933697A3E5F89F52">
+
+	<extraProperties ____objectunic="true" panelColor="#eee">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="1499" Y="1057"/>
+
+		</panel>
+
+	</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="6879AB187AB31D49A5E6E5F2427D7A56" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="name" kind="storage" scope="public" uuid="9E598FFA09E3FA498696400497B56AF6" type="string"/>
+
+	<attributes name="grow_rate" kind="storage" scope="public" uuid="40FA8BA334B7F94F8CA24080776C5922" type="long"/>
+
+	<attributes name="decay_time" kind="storage" scope="public" uuid="1E0C00DE4EF5C744B9B6CAE162CA113E" type="long"/>
+
+	<attributes name="productivity" kind="storage" scope="public" uuid="17369A5A4FD4ED4D9C1BFF939C35962F" type="long"/>
+
+	<attributes name="storability_time" kind="storage" scope="public" uuid="BFEB5D4F2C2F004489A10E79B9F9ACD9" type="long"/>
+
+	<attributes name="seed_price" kind="storage" scope="public" uuid="5959C5E73474B140AF47702366BBDBB7" type="long"/>
+
+	<attributes name="sell_price" kind="storage" scope="public" uuid="19BBAAEF18811645BB63B049A499966D" type="long"/>
+
+	<attributes name="cultureCollection" kind="relatedEntities" scope="public" type="CultureCollection" reversePath="true" path="culture_type"/>
+
+</dataClasses>
+
+<dataClasses name="Fight" className="Fight" collectionName="FightCollection" scope="public" uuid="9AAC24A2D48A60448D16C0FFCB733AB1">
+
+	<extraProperties ____objectunic="true" panelColor="#B8CCE4">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="49" Y="1043"/>
+
+		</panel>
+
+	</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="58CE9EC5EBD56145A020730D797A6522" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="remaining_peace_time" kind="storage" scope="public" uuid="F842A093085B254E9FA9603FD69C42F1" type="long"/>
+
+	<attributes name="attacker" kind="relatedEntity" scope="public" uuid="1D33A2BAC05E2045B1D80DCDF8775110" type="Character" path="Character"/>
+
+	<attributes name="defender" kind="relatedEntity" scope="public" uuid="6817CDBA45C88D448EF16820B94F70ED" type="Character" path="Character"/>
+
+	<attributes name="winner" kind="storage" scope="public" uuid="E89DAFB0DD382843954BF3E2D0FFDF19" type="string"/>
+
+	<attributes name="fighterCollection" kind="relatedEntities" scope="public" type="FighterCollection" reversePath="true" path="fight"/>
+
+	<attributes name="tileCollection" kind="relatedEntities" scope="public" type="TileCollection" reversePath="true" path="fight"/>
+
+</dataClasses>
+
+<dataClasses name="Fighter" className="Fighter" collectionName="FighterCollection" scope="public" uuid="DEF3ECE4AB6C4444B12B89F32B4B4BA8">
+
+	<extraProperties ____objectunic="true" panelColor="#E5B9B7">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="426" Y="1026"/>
+
+		</panel>
+
+	</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="F09EF320D7BB5844A9399B43A2527284" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="is_attacker" kind="storage" scope="public" uuid="6F6C220BFE6A5B41AD61925E1363FFBB" type="bool"/>
+
+	<attributes name="character" kind="relatedEntity" scope="public" uuid="E64789267DB4124F998E8E6371B3B0A7" type="Character" path="Character"/>
+
+	<attributes name="fight" kind="relatedEntity" scope="public" uuid="8280EC3494EE5B42A771A3F71B3FD00B" type="Fight" path="Fight"/>
+
+</dataClasses>
+
+<dataClasses name="Game" className="Game" collectionName="GameCollection" scope="public" uuid="2DEB48E9F4D4F343BBB5E0EC2572625C">
+
+	<extraProperties ____objectunic="true" panelColor="#E5B9B7">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="383" Y="228"/>
+
+		</panel>
+
+	</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="91588555B1DA7A48BE0501CF010F429A" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="private" kind="storage" scope="public"/>
+
+	<attributes name="user" kind="relatedEntity" scope="public" uuid="A2879DE49B681D46B77A7C3678BC70A2" type="User" path="User"/>
+
+	<attributes name="start_level" kind="relatedEntity" scope="public" uuid="1A438CD33CBDCC4796EEB7121267F1E2" type="StartLevel" path="StartLevel"/>
+
+	<attributes name="characterCollection" kind="relatedEntities" scope="public" type="CharacterCollection" reversePath="true" path="game"/>
+
+</dataClasses>
+
+<dataClasses name="GameElement" className="GameElement" collectionName="GameElementCollection" scope="public" uuid="4947CBE895DACB42960906146738135D">
+
+	<extraProperties ____objectunic="true" panelColor="#D8D8D8">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="739" Y="813"/>
+
+		</panel>
+
+	</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="ECD674AA04EACD4A9DD4C339A8B08DDD" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="tileCollection" kind="relatedEntities" scope="public" type="TileCollection" reversePath="true" path="game_element"/>
+
+	<attributes name="building" kind="relatedEntity" scope="public" uuid="100E218DB88A674BA1ABA4E3E1C02302" type="Building" path="Building"/>
+
+	<attributes name="culture" kind="relatedEntity" scope="public" uuid="84EB0430163E1F41818AD72719C50750" type="Culture" path="Culture"/>
+
+</dataClasses>
+
+<dataClasses name="NaturalEvent" className="NaturalEvent" collectionName="NaturalEventCollection" scope="public" uuid="2E0939B4FDADA74080AD5DFB9C8583D4">
+
+	<extraProperties ____objectunic="true" panelColor="#D88CFF">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="844" Y="1407"/>
+
+		</panel>
+
+	</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="49B77665967CC74FB11C57B55C61B974" unique="true" autosequence="true" type="long"/>
+
+	<attributes name="x_vector" kind="storage" scope="public" uuid="159DAD0F434E7544AC4318C80D28CA35" type="long"/>
+
+	<attributes name="y_vector" kind="storage" scope="public" uuid="8557651B998E8345AD7F6940A66B0F40" type="long"/>
+
+	<attributes name="x_center" kind="storage" scope="public" uuid="448E79C70DD6674B8AA6DE291D46F6A4" unique="true" type="long" primKey="true"/>
+
+	<attributes name="y_center" kind="storage" scope="public" uuid="62220255D9D5E54B877C03E7AB5BD864" type="long"/>
+
+	<attributes name="tileCollection" kind="relatedEntities" scope="public" type="TileCollection" reversePath="true" path="natural_event"/>
+
+	<attributes name="natural_event_type" kind="relatedEntity" scope="public" uuid="0980BF0587BD704587B053C45EFD04F5" type="NaturalEventType" path="NaturalEventType"/>
+
+</dataClasses>
+
+<dataClasses name="NaturalEventType" className="NaturalEventType" collectionName="NaturalEventTypeCollection" scope="public" uuid="67322E84B6C5374098ADE271E6EC1138">
+
+	<extraProperties ____objectunic="true" panelColor="#C4BD97">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="1340" Y="1485"/>
+
+		</panel>
+
+	</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="D6B629EBE782854485F609836AC5B494" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="name" kind="storage" scope="public" uuid="58D41C4993625C479DF35B1B21C21844" type="string"/>
+
+	<attributes name="is_moving" kind="storage" scope="public" uuid="498D9A22314D434FA1B8D582875A9BFA" type="bool"/>
+
+	<attributes name="tile_area" kind="storage" scope="public" uuid="7DD97C1F47A98E438A8579CD5962F042" type="long"/>
+
+	<attributes name="naturalEventCollection" kind="relatedEntities" scope="public" type="NaturalEventCollection" reversePath="true" path="natural_event_type"/>
+
+</dataClasses>
+
+<dataClasses name="StartLevel" className="StartLevel" collectionName="StartLevelCollection" scope="public" uuid="894E5576CFC6FE49A7D4C574DA7F4862">
+
+	<extraProperties ____objectunic="true" panelColor="#7F7F7F">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="720" Y="250"/>
+
+		</panel>
+
+	</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="1A684FEAC1F1EE44918E188896B2F4A3" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="name" kind="storage" scope="public" uuid="6D3B42CA4D689B4D90FF0CD2236A6CBC" type="string"/>
+
+	<attributes name="money" kind="storage" scope="public" uuid="178DAEA9B8759D4DB6195F8BCCD67203" type="long"/>
+
+	<attributes name="gameCollection" kind="relatedEntities" scope="public" type="GameCollection" reversePath="true" path="start_level"/>
+
+</dataClasses>
+
+<dataClasses name="Tile" className="Tile" collectionName="TileCollection" scope="public" uuid="EEA6A2B3D7671B47B33B24035F0DFF8F">
+
+	<extraProperties ____objectunic="true" panelColor="#D8D8D8">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="453" Y="631"/>
+
+		</panel>
+
+	</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="7D614C4143775B4A96B7DF78111277ED" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="pos_x" kind="storage" scope="public" uuid="554DEB0EEBD1DF4ABEFED7F9A50C75EE" type="long"/>
+
+	<attributes name="pos_y" kind="storage" scope="public" uuid="F6B147DF59CC9D438E2390441DD7F234" type="long"/>
+
+	<attributes name="humidity" kind="storage" scope="public" uuid="79863D817BF2724EADCDBC8217B60FB8" type="long"/>
+
+	<attributes name="fertility" kind="storage" scope="public" uuid="92F01D81CD73C44FA5D7AF17110F9FF2" type="long"/>
+
+	<attributes name="character" kind="relatedEntity" scope="public" uuid="2947334234F17040AFCB7A542DECB81B" type="Character" path="Character"/>
+
+	<attributes name="fight" kind="relatedEntity" scope="public" uuid="2486DF95B0FB00469ACC7936D90FF3A8" type="Fight" path="Fight"/>
+
+	<attributes name="natural_event" kind="relatedEntity" scope="public" uuid="ABDF04C1B70861499D204B49BD5DCD4C" type="NaturalEvent" path="NaturalEvent"/>
+
+	<attributes name="game_element" kind="relatedEntity" scope="public" uuid="9C7D8D168245FD4DB9FE586564F86443" type="GameElement" path="GameElement"/>
+
+</dataClasses>
+
+<dataClasses name="User" className="User" collectionName="UserCollection" scope="public" uuid="C548A21FCFA3A64CBB09B6604F9CAE01">
+
+	<extraProperties ____objectunic="true" panelColor="#C4BD97">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="729" Y="5"/>
+
+		</panel>
+
+	</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="410C554D9DC1D2449A5C37CB360F79B6" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="username" kind="storage" scope="public" uuid="A75234587EBA684B9BBB6964EFDE92D6" type="string"/>
+
+	<attributes name="email" kind="storage" scope="public" uuid="C30BD454B37A3B4EA8413B8EBC8F1CF4" type="string"/>
+
+	<attributes name="password" kind="storage" scope="public" uuid="DD291313BE0DB04A866A2341797E8AED" type="string"/>
+
+	<attributes name="is_admin" kind="storage" scope="public" uuid="B1EF485BA69CD64989403704B8239A8A" type="bool"/>
+
+	<attributes name="gameCollection" kind="relatedEntities" scope="public" type="GameCollection" reversePath="true" path="user"/>
+
+</dataClasses>
+
+<dataClasses name="Weapon" className="Weapon" collectionName="WeaponCollection" scope="public" uuid="ADD8AEB648D2E64B924B264590DFDD46">
+
+	<extraProperties ____objectunic="true" panelColor="#D7E3BC">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="402" Y="1359"/>
+
+		</panel>
+
+	</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="4D0BED64BF83AC4AB7559FC936F1C07D" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="name" kind="storage" scope="public" uuid="D98C5825D845914FBBA027E11A8044B0" type="string"/>
+
+	<attributes name="power" kind="storage" scope="public" uuid="99FAD814C4117344B9CB351EDD744933" type="long"/>
+
+	<attributes name="hit_ratio" kind="storage" scope="public" uuid="C3F18816DFF4D54F90C45E5A2AA055FA" type="long"/>
+
+	<attributes name="attack_speed" kind="storage" scope="public" uuid="562753635DEA9942A8AC24DE1515F163" type="long"/>
+
+	<attributes name="characterCollection" kind="relatedEntities" scope="public" type="CharacterCollection" reversePath="true" path="weapon"/>
+
+</dataClasses>
+
+<extraProperties ____objectunic="true" version="1">
+
+	<model ____objectunic="true" scriptMode="manual">
+
+		<relationCurve ____objectunic="true" run="true" mode="1"/>
+
+	</model>
+
+	<classes ____objectunic="true">
+
+		<Alliance ____objectunic="true" panelColor="#8DB3E2">
+
+			<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+				<position ____objectunic="true" X="30" Y="19"/>
+
+			</panel>
+
+		</Alliance>
+
+		<Building ____objectunic="true" panelColor="#B8CCE4">
+
+			<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+				<position ____objectunic="true" X="1025" Y="623"/>
+
+			</panel>
+
+		</Building>
+
+		<BuildingType ____objectunic="true" panelColor="#C4BD97">
+
+			<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+				<position ____objectunic="true" X="1491" Y="619"/>
+
+			</panel>
+
+		</BuildingType>
+
+		<Character ____objectunic="true" panelColor="#C4BD97">
+
+			<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+				<position ____objectunic="true" X="10" Y="347"/>
+
+			</panel>
+
+		</Character>
+
+		<Culture ____objectunic="true" panelColor="#76923C">
+
+			<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+				<position ____objectunic="true" X="942" Y="1079"/>
+
+			</panel>
+
+		</Culture>
+
+		<CultureType ____objectunic="true" panelColor="#eee">
+
+			<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+				<position ____objectunic="true" X="1499" Y="1057"/>
+
+			</panel>
+
+		</CultureType>
+
+		<Fight ____objectunic="true" panelColor="#B8CCE4">
+
+			<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+				<position ____objectunic="true" X="49" Y="1043"/>
+
+			</panel>
+
+		</Fight>
+
+		<Fighter ____objectunic="true" panelColor="#E5B9B7">
+
+			<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+				<position ____objectunic="true" X="426" Y="1026"/>
+
+			</panel>
+
+		</Fighter>
+
+		<Game ____objectunic="true" panelColor="#E5B9B7">
+
+			<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+				<position ____objectunic="true" X="383" Y="228"/>
+
+			</panel>
+
+		</Game>
+
+		<GameElement ____objectunic="true" panelColor="#D8D8D8">
+
+			<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+				<position ____objectunic="true" X="739" Y="813"/>
+
+			</panel>
+
+		</GameElement>
+
+		<NaturalEvent ____objectunic="true" panelColor="#D88CFF">
+
+			<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+				<position ____objectunic="true" X="844" Y="1407"/>
+
+			</panel>
+
+		</NaturalEvent>
+
+		<NaturalEventType ____objectunic="true" panelColor="#C4BD97">
+
+			<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+				<position ____objectunic="true" X="1340" Y="1485"/>
+
+			</panel>
+
+		</NaturalEventType>
+
+		<StartLevel ____objectunic="true" panelColor="#7F7F7F">
+
+			<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+				<position ____objectunic="true" X="720" Y="250"/>
+
+			</panel>
+
+		</StartLevel>
+
+		<Tile ____objectunic="true" panelColor="#D8D8D8">
+
+			<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+				<position ____objectunic="true" X="453" Y="631"/>
+
+			</panel>
+
+		</Tile>
+
+		<User ____objectunic="true" panelColor="#C4BD97">
+
+			<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+				<position ____objectunic="true" X="729" Y="5"/>
+
+			</panel>
+
+		</User>
+
+		<Weapon ____objectunic="true" panelColor="#D7E3BC">
+
+			<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+				<position ____objectunic="true" X="402" Y="1359"/>
+
+			</panel>
+
+		</Weapon>
+
+	</classes>
+
+</extraProperties>
+</EntityModelCatalog>
